@@ -2,18 +2,21 @@
 rm(list=ls())
 
 #install needed packages and %notin% function
-needed_packages <- c("dplyr", "purrr",  "REDCapR", "httr", "redcapAPI", "lubridate", "kableExtra", "knitr", "janitor", "tidyr", "stringr", "rvest", "RSelenium", "filesstrings")
+needed_packages <- c("dplyr", "purrr",  "REDCapR", "httr", "redcapAPI", "lubridate", "kableExtra", "knitr", "janitor", "tidyr", "stringr", "rvest", "devtools", "filesstrings")
 missing_packages <- needed_packages[!(needed_packages %in% installed.packages()[,"Package"])]
 if(length(missing_packages)) install.packages((missing_packages))
 lapply(needed_packages, require, character.only=TRUE)
 `%notin%` <- Negate(`%in%`)
+
+install_version("RSelenium", version = "1.7.0", repos = "http://cran.us.r-project.org")
+library(RSelenium)
 
 #set the wd to the appropriate folder to be able to access downloads and dropbox/onedrive
 # currentwd <- getwd() #store the current wd to be able to reset it after the script finishes
 # setwd("/Users/paulcaih/") #set the working directory to someplace where you can access downloads and dropbox
 
 #open session
-rD <- rsDriver(browser = "phantomjs")
+rD <- rsDriver()
 remDr <- rD$client
 
 #### Login ####
