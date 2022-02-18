@@ -1,1 +1,0 @@
-# barcs_webscraping
