@@ -13,7 +13,7 @@ lapply(needed_packages, require, character.only=TRUE)
 # setwd("/Users/paulcaih/") #set the working directory to someplace where you can access downloads and dropbox
 
 #open session
-rD <- rsDriver(chromever = "97.0.4692.71", port = 4444L)
+rD <- rsDriver()
 remDr <- rD$client
 
 #### Login ####
