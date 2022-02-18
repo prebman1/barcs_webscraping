@@ -1,0 +1,31 @@
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+
+jobs:
+  r_barcs_webscarping_run:
+    name: Run BARCS webscaping
+    runs-on: ubuntu-latest
+    container: rocker/verse
+    steps:
+    
+      - name: Checkout 
+        uses: actions/checkout@v2    
+      
+      
+      - name: Install packages
+        run: |
+          install.packages('remotes')
+          remotes::install_cran("RSelenium")
+          remotes::install_cran("rvest")
+          remotes::install_cran("dplyr")
+          remotes::install_cran("stringr")
+        shell: Rscript {0}
+
+      - name: Send Test Email
+        run: Rscript R/barcs_webscraping_final.R
+
+
+    
