@@ -7,7 +7,7 @@ on:
 jobs:
   r_barcs_webscarping_run:
     name: Run BARCS webscaping
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     container: rocker/verse
     steps:
     
