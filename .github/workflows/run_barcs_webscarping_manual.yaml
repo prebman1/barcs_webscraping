@@ -24,8 +24,8 @@ jobs:
           remotes::install_cran("stringr")
         shell: Rscript {0}
 
-      - name: Send Test Email
-        run: Rscript R/barcs_webscraping_final.R
+      - name: Run RScript
+        run: Rscript R/barcs_webscraping_test.R
 
 
     
