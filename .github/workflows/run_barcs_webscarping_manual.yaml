@@ -22,7 +22,7 @@ jobs:
           
       - name: Setup firefox
         uses: browser-actions/setup-firefox@latest 
-        run: firefox --version 
+      - run: firefox --version 
       
       - name: Install packages
         run: |
