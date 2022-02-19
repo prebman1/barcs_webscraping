@@ -15,12 +15,14 @@ Sys.setenv(GITHUB_PAT = github_pat_value)
 devtools::install_github("ropensci/RSelenium")
 library(RSelenium)
 
+library(stevedore)
+docker_available()
 #set the wd to the appropriate folder to be able to access downloads and dropbox/onedrive
 # currentwd <- getwd() #store the current wd to be able to reset it after the script finishes
 # setwd("/Users/paulcaih/") #set the working directory to someplace where you can access downloads and dropbox
 
 #open session
-rD <- rsDriver(browser = "chrome", chromever = "98.0.4758.102")
+rD <- rsDriver(browser = "firefox")
 remDr <- rD$client
 
 #### Login ####
