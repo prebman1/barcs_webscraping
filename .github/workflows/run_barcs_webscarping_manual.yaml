@@ -5,7 +5,7 @@ jobs:
   r_barcs_webscarping_run:
     name: Run BARCS webscaping
     runs-on: ubuntu-latest
-    #container: rocker/verse
+    container: rocker/verse
     steps:
     
       - name: Checkout 
