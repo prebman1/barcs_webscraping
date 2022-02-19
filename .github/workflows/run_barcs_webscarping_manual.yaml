@@ -19,8 +19,9 @@ jobs:
         with:
           java-version: 1.8
           
-      - name: Setup firefox
-        uses: browser-actions/setup-firefox@latest 
+      - name: Setup Firefox
+        uses: browser-actions/setup-firefox@v0.0.0
+
       - run: firefox --version 
       
       - name: Install packages
