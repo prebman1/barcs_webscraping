@@ -10,6 +10,7 @@ lapply(needed_packages, require, character.only=TRUE)
 
 #install_version("RSelenium", version = "1.7.0", repos = "http://cran.us.r-project.org")
 #library(RSelenium)
+github_pat_value <- Sys.getenv("github_pat_value")
 Sys.setenv(GITHUB_PAT = github_pat_value)
 print(GITHUB_PAT)
 devtools::install_github("ropensci/RSelenium")
