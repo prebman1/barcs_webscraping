@@ -12,7 +12,7 @@ lapply(needed_packages, require, character.only=TRUE)
 #library(RSelenium)
 github_pat_value <- Sys.getenv("github_pat_value")
 Sys.setenv(GITHUB_PAT = github_pat_value)
-print(GITHUB_PAT)
+print(github_pat_value)
 devtools::install_github("ropensci/RSelenium")
 
 #set the wd to the appropriate folder to be able to access downloads and dropbox/onedrive
