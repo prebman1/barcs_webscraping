@@ -47,7 +47,7 @@ dogs <- as.data.frame(matrix(nrow = 0, ncol = 13))
 colnames(dogs) <- c('Animal ID', 'Species', 'Breed', 'Age', 'Gender', 'Size', 'Color', 'Spayed/Neutered', 'Declawed', 'Housetrained', 'Location', 'Intake Date', 'Name')
 
 for(i in 1:length(dog_urls)){
-  url <- list_of_dogs1[i]
+  url <- dog_urls[i]
   
   remDr$navigate(paste0("https://ws.petango.com/webservices/adoptablesearch/", url))
   Sys.sleep(3)
