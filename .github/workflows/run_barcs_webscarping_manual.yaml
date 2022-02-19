@@ -23,6 +23,8 @@ jobs:
 
       - name: Run RScript
         run: Rscript R/barcs_webscraping_test.R
+        env: 
+          github_pat_value: ${{ secrets.PAT_BARCS }}
 
 
     
