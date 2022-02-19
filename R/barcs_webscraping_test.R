@@ -20,7 +20,7 @@ library(RSelenium)
 # setwd("/Users/paulcaih/") #set the working directory to someplace where you can access downloads and dropbox
 
 #open session
-rD <- rsDriver(browser = "chrome")
+rD <- rsDriver(browser = "chrome", chromever = "97.0.4692.71")
 remDr <- rD$client
 
 #### Login ####
