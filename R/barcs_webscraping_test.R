@@ -2,7 +2,7 @@
 rm(list=ls())
 
 #install needed packages and %notin% function
-needed_packages <- c("dplyr", "purrr", "httr", "lubridate", "kableExtra", "knitr", "janitor", "tidyr", "stringr", "rvest", "devtools", "filesstrings", "devtools")
+needed_packages <- c("dplyr", "purrr", "httr", "lubridate", "kableExtra", "knitr", "janitor", "tidyr", "stringr", "rvest", "devtools", "filesstrings", "devtools", "RSelenium")
 missing_packages <- needed_packages[!(needed_packages %in% installed.packages()[,"Package"])]
 if(length(missing_packages)) install.packages((missing_packages))
 lapply(needed_packages, require, character.only=TRUE)
@@ -10,13 +10,13 @@ lapply(needed_packages, require, character.only=TRUE)
 
 #install_version("RSelenium", version = "1.7.0", repos = "http://cran.us.r-project.org")
 #library(RSelenium)
-github_pat_value <- Sys.getenv("github_pat_value")
-Sys.setenv(GITHUB_PAT = github_pat_value)
-devtools::install_github("ropensci/RSelenium")
-library(RSelenium)
-
-library(stevedore)
-docker_available()
+# github_pat_value <- Sys.getenv("github_pat_value")
+# Sys.setenv(GITHUB_PAT = github_pat_value)
+# devtools::install_github("ropensci/RSelenium")
+# library(RSelenium)
+# 
+# library(stevedore)
+# docker_available()
 #set the wd to the appropriate folder to be able to access downloads and dropbox/onedrive
 # currentwd <- getwd() #store the current wd to be able to reset it after the script finishes
 # setwd("/Users/paulcaih/") #set the working directory to someplace where you can access downloads and dropbox
