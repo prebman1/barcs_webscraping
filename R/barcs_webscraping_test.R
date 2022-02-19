@@ -11,6 +11,7 @@ lapply(needed_packages, require, character.only=TRUE)
 #install_version("RSelenium", version = "1.7.0", repos = "http://cran.us.r-project.org")
 #library(RSelenium)
 Sys.setenv(GITHUB_PAT = github_pat_value)
+print(GITHUB_PAT)
 devtools::install_github("ropensci/RSelenium")
 
 #set the wd to the appropriate folder to be able to access downloads and dropbox/onedrive
