@@ -98,4 +98,4 @@ dogs$age_years <- as.numeric(dogs$age_years)
 
 dogs$color_primary <- sapply(str_split(dogs$color, "/"), `[`,1)
 
-#write.csv(dogs, paste0("OneDrive/Documents/Barcs Webscraping/Output/dogs_download_", format(Sys.Date(), "%Y_%m_%d"), ".csv"), row.names = FALSE)
+write.csv(dogs, paste0("Output/dogs_download_", format(Sys.Date(), "%Y_%m_%d"), ".csv"), row.names = FALSE)
